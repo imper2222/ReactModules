@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import Gallery from './components/gallery/Gallery'
 import Grid from './components/grid/Grid'
 
