@@ -1,0 +1,34 @@
+import React from 'react';
+import logo from './logo.svg';
+import Gallery from './components/gallery/Gallery'
+import Grid from './components/grid/Grid'
+
+function App() {
+
+  const images = [
+    { src: "https://public-media.si-cdn.com/filer/21/d5/21d52f51-bb0a-457f-8669-4afd346e85a8/brjx5m.jpg", caption: "Żyrafy tańcujące na sawannie" },
+    { src: "https://images.wallpaperscraft.com/image/cat_view_brown_151880_800x600.jpg", caption: "" },
+    { src: "https://www.euractiv.pl/wp-content/uploads/sites/6/2020/07/aj-robbie-BuQ1RZckYW4-unsplash-800x600.jpg", caption: "" },
+    { src: "https://download.komputerswiat.pl/media/2019/199/9142762/zoo-tycoon-ultimate-animal-collection-symulator-strategia-s.jpg", caption: "" },
+    { src: "https://eurofoto.com.pl/wp-content/uploads/2020/07/fotografia-kon.jpg", caption: "" }
+  ]
+
+  const data = [
+    { name: "Adam", surname: "Kot", age: 20 },
+    { name: "Karol", surname: "Pies", age: 22 },
+    { name: "Andrzej", surname: "Sowa", age: 23 },
+    { name: "Kamil", surname: "Ucho", age: 30 }
+  ]
+
+  return (
+    <div>
+      <h1>Galeria</h1>
+      <Gallery images={images} />
+      <hr />
+      <h1>Grid</h1>
+      <Grid data={data}/>
+    </div>
+  );
+}
+
+export default App;
