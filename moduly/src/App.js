@@ -2,8 +2,11 @@ import React from 'react';
 import Gallery from './components/gallery/Gallery'
 import Grid from './components/grid/Grid'
 import Clock from './components/clock/Clock'
+import SlidingMenuContainer from  './components/slidingmenu/SlidingMenuContainer'
 import Navbar from './components/navbar/Navbar';
 import NavbarItem from './components/navbar/NavItem';
+import SlidingMenuButton from './components/slidingmenu/SlidingMenuButton';
+
 
 
 
@@ -21,7 +24,8 @@ function App() {
     { name: "Adam", surname: "Kot", age: 20 },
     { name: "Karol", surname: "Pies", age: 22 },
     { name: "Andrzej", surname: "Sowa", age: 23 },
-    { name: "Kamil", surname: "Ucho", age: 30 }
+    { name: "Kamil", surname: "Ucho", age: 30 },
+    { name: "Piotr", surname: "Łącki", age: 30 }
   ]
 
   return (
@@ -38,6 +42,17 @@ function App() {
       <p>Źródło: praca własna</p>
       <Clock />
       <hr />
+      <h1>Wysuwane menu</h1>
+      <p>Źródło: "React i Redux"</p>
+      <SlidingMenuContainer>
+        <ul>
+          <li><a href="" style={{color:"white"}}>Opcja 1</a></li>
+          <li><a href="" style={{color:"white"}}>Opcja 2</a></li>
+          <li><a href="" style={{color:"white"}}>Opcja 3</a></li>
+          <li><a href="" style={{color:"white"}}>Opcja 4</a></li>
+        </ul>
+      </SlidingMenuContainer>
+      <hr />
       <h1>Navbar</h1>
       <p>Źródło: https://www.youtube.com/watch?v=IF6k0uZuypA</p>
       <Navbar>
@@ -46,3 +61,5 @@ function App() {
     </div>
   );
 }
+
+export default App
