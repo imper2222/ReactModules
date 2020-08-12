@@ -28,7 +28,11 @@ class GalleryModal extends React.Component {
             marginRight: "auto",
             width: "80vw",
             height: "80vh",
-            objectFit: "contain"
+            objectFit: "contain",
+
+            //animacje
+            animationName: "zoom",
+            animationDuration: "0.6s"
         }
 
         const styleCaption = {
@@ -85,8 +89,12 @@ class GalleryModal extends React.Component {
             transform: "scale(1.1)"
         }
 
+        const animationZoom = "@keyframes zoom {from {transform: scale(0)}to {transform: scale(1)}}"
+
+
         return (
             <div style={styleModal}>
+                <style children={animationZoom} />
                 <img style={styleImage} src={this.props.image.src}></img>
                 {
                     this.props.image.caption &&
