@@ -6,9 +6,7 @@ import SlidingMenuContainer from  './components/slidingmenu/SlidingMenuContainer
 import Navbar from './components/navbar/Navbar';
 import NavbarItem from './components/navbar/NavItem';
 import SlidingMenuButton from './components/slidingmenu/SlidingMenuButton';
-
-
-
+import NumericInput from './components/numericinput/NumericInput';
 
 function App() {
 
@@ -42,8 +40,12 @@ function App() {
       <p>Źródło: praca własna</p>
       <Clock />
       <hr />
+      <h1>Licznik</h1>
+      <p>Źródło: praca własna</p>
+      <NumericInput />
+      <hr />
       <h1>Wysuwane menu</h1>
-      <p>Źródło: "React i Redux"</p>
+      <p>Źródło: "React i Redux + praca własna"</p>
       <SlidingMenuContainer>
         <ul>
           <li><a href="" style={{color:"white"}}>Opcja 1</a></li>
