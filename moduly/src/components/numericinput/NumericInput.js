@@ -9,7 +9,8 @@ class NumericInput extends React.Component{
     render(){
         
         const styleNumericInput = {
-            display: "flex",  
+            display: "flex",
+            alignItems: "center"  
         }
 
         const styleInput = {

@@ -7,6 +7,8 @@ import Navbar from './components/navbar/Navbar';
 import NavbarItem from './components/navbar/NavItem';
 import SlidingMenuButton from './components/slidingmenu/SlidingMenuButton';
 import NumericInput from './components/numericinput/NumericInput';
+import VoiceReader from './components/voicereader/VoiceReader';
+
 
 function App() {
 
@@ -43,6 +45,10 @@ function App() {
       <h1>Licznik</h1>
       <p>Źródło: praca własna</p>
       <NumericInput />
+      <hr />
+      <h1>Odczytywacz</h1>
+      <p>Źródło: praca własna</p>
+      <VoiceReader />
       <hr />
       <h1>Wysuwane menu</h1>
       <p>Źródło: "React i Redux + praca własna"</p>
