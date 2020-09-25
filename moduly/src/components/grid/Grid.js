@@ -26,12 +26,15 @@ class Grid extends React.Component {
     }
 
     columnHeadrs() {
+        console.log(this.props.data)
         return (
             <tr>
                 {
                     Object.keys(this.props.data[0]).map((property, i) =>
+                        this.isHeaderForProperty(property) &&
+
                         <th key={i} column={property} onClick={() => this.changeSort(property)}>
-                            {property}
+                            {this.props.headers[property]}
                             { 
                                 this.state.sortColumn === property && 
                                 (this.state.sortAscending ?
@@ -50,6 +53,8 @@ class Grid extends React.Component {
             <tr>
                 {
                     Object.keys(this.props.data[0]).map((property, i) =>
+                        this.isHeaderForProperty(property) &&
+
                         <th key={i} column={property}>
                             <input type="text" onChange={(e) => this.changeFilters(e, property)}></input>
                         </th>
@@ -65,6 +70,7 @@ class Grid extends React.Component {
                 <tr>
                     {
                         Object.keys(object).map((property, i) =>
+                            this.isHeaderForProperty(property) &&
                             <td>{object[property]}</td>)
                     }
                 </tr>)
@@ -74,7 +80,9 @@ class Grid extends React.Component {
     render() {
         return (
             <div>
-                {this.groupSelector()}
+                {
+                    //this.groupSelector()
+                }
                 <table>
                     {this.columnHeadrs()}
                     {this.columnFilters()}
@@ -110,6 +118,20 @@ class Grid extends React.Component {
 
     changeGrouping = (e) => {
         this.setState({ grouping: e.target.value });
+    }
+
+    isHeaderForProperty(property) {
+        console.log(this.props.headers);
+
+        if (this.props.headers) {
+            for (let prop in this.props.headers) {
+                if (prop == property)
+                    return true;
+            }
+            return false;
+        }
+        return true;
+        
     }
 
 }
