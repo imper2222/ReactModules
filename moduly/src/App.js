@@ -5,13 +5,8 @@ import Clock from './components/clock/Clock'
 import SlidingMenuContainer from  './components/slidingmenu/SlidingMenuContainer'
 import Navbar from './components/navbar/Navbar';
 import NavbarItem from './components/navbar/NavItem';
-import SlidingMenuButton from './components/slidingmenu/SlidingMenuButton';
 import ConfirmBox from './components/confirmbox/ConfirmBox';
-<<<<<<< HEAD
-import Counter from './components/numericinput/NumericInput';
-=======
 import Counter from './components/counter/Counter';
->>>>>>> 85ae4c9... Dodanie licynika
 
 function App() {
 
